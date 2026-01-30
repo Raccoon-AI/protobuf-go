@@ -102,6 +102,9 @@ type MarshalOptions struct {
 	// a strict superset of the latter.
 	EmitDefaultValues bool
 
+	// Config option to print 64-bit numbers in JSON as unquoted ints
+	Unquoted64BitNumber bool
+
 	// Resolver is used for looking up types when expanding google.protobuf.Any
 	// messages. If nil, this defaults to using protoregistry.GlobalTypes.
 	Resolver interface {
@@ -308,10 +311,21 @@ func (e encoder) marshalSingular(val protoreflect.Value, fd protoreflect.FieldDe
 	case protoreflect.Uint32Kind, protoreflect.Fixed32Kind:
 		e.WriteUint(val.Uint())
 
-	case protoreflect.Int64Kind, protoreflect.Sint64Kind, protoreflect.Uint64Kind,
-		protoreflect.Sfixed64Kind, protoreflect.Fixed64Kind:
-		// 64-bit integers are written out as JSON string.
-		e.WriteString(val.String())
+	case protoreflect.Int64Kind, protoreflect.Sint64Kind,
+		protoreflect.Sfixed64Kind:
+		if e.opts.Unquoted64BitNumber {
+			e.WriteInt(val.Int())
+		} else {
+			// 64-bit integers are written out as JSON string.
+			e.WriteString(val.String())
+		}
+	case protoreflect.Uint64Kind, protoreflect.Fixed64Kind:
+		if e.opts.Unquoted64BitNumber {
+			e.WriteUint(val.Uint())
+		} else {
+			// 64-bit integers are written out as JSON string.
+			e.WriteString(val.String())
+		}
 
 	case protoreflect.FloatKind:
 		// Encoder.WriteFloat handles the special numbers NaN and infinites.
