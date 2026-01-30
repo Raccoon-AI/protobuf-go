@@ -24,9 +24,9 @@
 package pluginpb
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	descriptorpb "google.golang.org/protobuf/types/descriptorpb"
+	protoreflect "github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	protoimpl "github.com/Raccoon-AI/protobuf-go/runtime/protoimpl"
+	descriptorpb "github.com/Raccoon-AI/protobuf-go/types/descriptorpb"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
@@ -519,7 +519,7 @@ const file_google_protobuf_compiler_plugin_proto_rawDesc = "" +
 	"\fFEATURE_NONE\x10\x00\x12\x1b\n" +
 	"\x17FEATURE_PROTO3_OPTIONAL\x10\x01\x12\x1d\n" +
 	"\x19FEATURE_SUPPORTS_EDITIONS\x10\x02Br\n" +
-	"\x1ccom.google.protobuf.compilerB\fPluginProtosZ)google.golang.org/protobuf/types/pluginpb\xaa\x02\x18Google.Protobuf.Compiler"
+	"\x1ccom.google.protobuf.compilerB\fPluginProtosZ)github.com/Raccoon-AI/protobuf-go/types/pluginpb\xaa\x02\x18Google.Protobuf.Compiler"
 
 var (
 	file_google_protobuf_compiler_plugin_proto_rawDescOnce sync.Once

@@ -8,10 +8,10 @@
 package fuzz
 
 import (
-	test "google.golang.org/protobuf/internal/testprotos/test"
-	test3 "google.golang.org/protobuf/internal/testprotos/test3"
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	test "github.com/Raccoon-AI/protobuf-go/internal/testprotos/test"
+	test3 "github.com/Raccoon-AI/protobuf-go/internal/testprotos/test3"
+	protoreflect "github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	protoimpl "github.com/Raccoon-AI/protobuf-go/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"

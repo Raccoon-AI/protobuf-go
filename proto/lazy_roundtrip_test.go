@@ -9,11 +9,11 @@ import (
 	"testing"
 	"unsafe"
 
+	"github.com/Raccoon-AI/protobuf-go/internal/impl"
+	testopaquepb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/testeditions/testeditions_opaque"
+	"github.com/Raccoon-AI/protobuf-go/proto"
+	"github.com/Raccoon-AI/protobuf-go/testing/protocmp"
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/protobuf/internal/impl"
-	testopaquepb "google.golang.org/protobuf/internal/testprotos/testeditions/testeditions_opaque"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/testing/protocmp"
 )
 
 func fillLazyRequiredMessage() *testopaquepb.TestRequiredLazy {

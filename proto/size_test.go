@@ -7,10 +7,10 @@ package proto_test
 import (
 	"testing"
 
-	"google.golang.org/protobuf/encoding/prototext"
-	"google.golang.org/protobuf/encoding/protowire"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/types/known/anypb"
+	"github.com/Raccoon-AI/protobuf-go/encoding/prototext"
+	"github.com/Raccoon-AI/protobuf-go/encoding/protowire"
+	"github.com/Raccoon-AI/protobuf-go/proto"
+	"github.com/Raccoon-AI/protobuf-go/types/known/anypb"
 )
 
 // Checking if [Size] returns 0 is an easy way to recognize empty messages:

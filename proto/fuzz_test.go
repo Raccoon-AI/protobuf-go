@@ -8,11 +8,11 @@ import (
 	"math"
 	"testing"
 
+	"github.com/Raccoon-AI/protobuf-go/proto"
+	"github.com/Raccoon-AI/protobuf-go/testing/protocmp"
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/testing/protocmp"
 
-	testfuzzpb "google.golang.org/protobuf/internal/testprotos/editionsfuzztest"
+	testfuzzpb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/editionsfuzztest"
 )
 
 // compareEquivalentProtos compares equivalent messages m0 and m1, where one is

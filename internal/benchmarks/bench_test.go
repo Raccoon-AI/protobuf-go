@@ -14,18 +14,18 @@ import (
 	"testing"
 	"time"
 
-	"google.golang.org/protobuf/encoding/protojson"
-	"google.golang.org/protobuf/encoding/prototext"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/reflect/protoregistry"
+	"github.com/Raccoon-AI/protobuf-go/encoding/protojson"
+	"github.com/Raccoon-AI/protobuf-go/encoding/prototext"
+	"github.com/Raccoon-AI/protobuf-go/proto"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoregistry"
 
-	benchpb "google.golang.org/protobuf/internal/testprotos/benchmarks"
-	_ "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message1/proto2"
-	_ "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message1/proto3"
-	_ "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message2"
-	_ "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message3"
-	_ "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message4"
+	benchpb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/benchmarks"
+	_ "github.com/Raccoon-AI/protobuf-go/internal/testprotos/benchmarks/datasets/google_message1/proto2"
+	_ "github.com/Raccoon-AI/protobuf-go/internal/testprotos/benchmarks/datasets/google_message1/proto3"
+	_ "github.com/Raccoon-AI/protobuf-go/internal/testprotos/benchmarks/datasets/google_message2"
+	_ "github.com/Raccoon-AI/protobuf-go/internal/testprotos/benchmarks/datasets/google_message3"
+	_ "github.com/Raccoon-AI/protobuf-go/internal/testprotos/benchmarks/datasets/google_message4"
 )
 
 func BenchmarkWire(b *testing.B) {

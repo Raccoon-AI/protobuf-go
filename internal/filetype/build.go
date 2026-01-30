@@ -9,11 +9,11 @@ package filetype
 import (
 	"reflect"
 
-	"google.golang.org/protobuf/internal/descopts"
-	"google.golang.org/protobuf/internal/filedesc"
-	pimpl "google.golang.org/protobuf/internal/impl"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/reflect/protoregistry"
+	"github.com/Raccoon-AI/protobuf-go/internal/descopts"
+	"github.com/Raccoon-AI/protobuf-go/internal/filedesc"
+	pimpl "github.com/Raccoon-AI/protobuf-go/internal/impl"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoregistry"
 )
 
 // Builder constructs type descriptors from a raw file descriptor

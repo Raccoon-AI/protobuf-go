@@ -7,9 +7,9 @@ package impl
 import (
 	"sync"
 
-	"google.golang.org/protobuf/internal/errors"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/runtime/protoiface"
+	"github.com/Raccoon-AI/protobuf-go/internal/errors"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	"github.com/Raccoon-AI/protobuf-go/runtime/protoiface"
 )
 
 func (mi *MessageInfo) checkInitialized(in protoiface.CheckInitializedInput) (protoiface.CheckInitializedOutput, error) {

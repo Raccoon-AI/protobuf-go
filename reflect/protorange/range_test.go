@@ -8,17 +8,17 @@ import (
 	"testing"
 	"time"
 
+	"github.com/Raccoon-AI/protobuf-go/proto"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protopath"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoregistry"
+	"github.com/Raccoon-AI/protobuf-go/testing/protocmp"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protopath"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/reflect/protoregistry"
-	"google.golang.org/protobuf/testing/protocmp"
 
-	newspb "google.golang.org/protobuf/internal/testprotos/news"
-	"google.golang.org/protobuf/types/known/anypb"
-	"google.golang.org/protobuf/types/known/timestamppb"
+	newspb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/news"
+	"github.com/Raccoon-AI/protobuf-go/types/known/anypb"
+	"github.com/Raccoon-AI/protobuf-go/types/known/timestamppb"
 )
 
 func mustMarshal(m proto.Message) []byte {

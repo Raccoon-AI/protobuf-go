@@ -7,7 +7,7 @@ package protoreflect
 import (
 	"unsafe"
 
-	"google.golang.org/protobuf/internal/pragma"
+	"github.com/Raccoon-AI/protobuf-go/internal/pragma"
 )
 
 type (

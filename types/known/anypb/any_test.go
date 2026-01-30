@@ -7,15 +7,15 @@ package anypb_test
 import (
 	"testing"
 
+	"github.com/Raccoon-AI/protobuf-go/proto"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	"github.com/Raccoon-AI/protobuf-go/testing/protocmp"
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/testing/protocmp"
 
-	testpb "google.golang.org/protobuf/internal/testprotos/test"
-	apb "google.golang.org/protobuf/types/known/anypb"
-	epb "google.golang.org/protobuf/types/known/emptypb"
-	wpb "google.golang.org/protobuf/types/known/wrapperspb"
+	testpb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/test"
+	apb "github.com/Raccoon-AI/protobuf-go/types/known/anypb"
+	epb "github.com/Raccoon-AI/protobuf-go/types/known/emptypb"
+	wpb "github.com/Raccoon-AI/protobuf-go/types/known/wrapperspb"
 )
 
 func mustMarshal(m proto.Message) []byte {

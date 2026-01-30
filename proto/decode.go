@@ -5,14 +5,14 @@
 package proto
 
 import (
-	"google.golang.org/protobuf/encoding/protowire"
-	"google.golang.org/protobuf/internal/encoding/messageset"
-	"google.golang.org/protobuf/internal/errors"
-	"google.golang.org/protobuf/internal/genid"
-	"google.golang.org/protobuf/internal/pragma"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/reflect/protoregistry"
-	"google.golang.org/protobuf/runtime/protoiface"
+	"github.com/Raccoon-AI/protobuf-go/encoding/protowire"
+	"github.com/Raccoon-AI/protobuf-go/internal/encoding/messageset"
+	"github.com/Raccoon-AI/protobuf-go/internal/errors"
+	"github.com/Raccoon-AI/protobuf-go/internal/genid"
+	"github.com/Raccoon-AI/protobuf-go/internal/pragma"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoregistry"
+	"github.com/Raccoon-AI/protobuf-go/runtime/protoiface"
 )
 
 // UnmarshalOptions configures the unmarshaler.

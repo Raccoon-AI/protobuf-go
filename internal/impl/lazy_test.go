@@ -10,18 +10,18 @@ import (
 	"testing"
 	"unsafe"
 
+	"github.com/Raccoon-AI/protobuf-go/internal/errors"
+	"github.com/Raccoon-AI/protobuf-go/internal/flags"
+	"github.com/Raccoon-AI/protobuf-go/internal/impl"
+	"github.com/Raccoon-AI/protobuf-go/internal/protobuild"
+	"github.com/Raccoon-AI/protobuf-go/proto"
+	"github.com/Raccoon-AI/protobuf-go/runtime/protoimpl"
+	"github.com/Raccoon-AI/protobuf-go/testing/protocmp"
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/protobuf/internal/errors"
-	"google.golang.org/protobuf/internal/flags"
-	"google.golang.org/protobuf/internal/impl"
-	"google.golang.org/protobuf/internal/protobuild"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/runtime/protoimpl"
-	"google.golang.org/protobuf/testing/protocmp"
 
-	lazytestpb "google.golang.org/protobuf/internal/testprotos/lazy"
-	"google.golang.org/protobuf/internal/testprotos/messageset/messagesetpb"
-	testpb "google.golang.org/protobuf/internal/testprotos/test"
+	lazytestpb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/lazy"
+	"github.com/Raccoon-AI/protobuf-go/internal/testprotos/messageset/messagesetpb"
+	testpb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/test"
 )
 
 func TestLazyExtensions(t *testing.T) {

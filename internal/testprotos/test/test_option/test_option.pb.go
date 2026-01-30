@@ -8,8 +8,8 @@
 package test_option
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	protoreflect "github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	protoimpl "github.com/Raccoon-AI/protobuf-go/runtime/protoimpl"
 	reflect "reflect"
 	unsafe "unsafe"
 )
@@ -98,7 +98,7 @@ const file_internal_testprotos_test_test_option_proto_rawDesc = "" +
 	"\n" +
 	"*internal/testprotos/test/test_option.proto\x12\x12goproto.proto.test\")\n" +
 	"\x13OptionImportMessage\x12\x12\n" +
-	"\x04name\x18\x01 \x01(\tR\x04nameBbZ?google.golang.org/protobuf/internal/testprotos/test/test_option\x92\x03\x05\xd2>\x02\x10\x03\xaa\xd1\xf9\xd6\x03\x13\n" +
+	"\x04name\x18\x01 \x01(\tR\x04nameBbZ?github.com/Raccoon-AI/protobuf-go/internal/testprotos/test/test_option\x92\x03\x05\xd2>\x02\x10\x03\xaa\xd1\xf9\xd6\x03\x13\n" +
 	"\x11no package optionb\beditionsp\xe9\az-internal/testprotos/test/test_nopackage.protoz!google/protobuf/go_features.proto"
 
 var file_internal_testprotos_test_test_option_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

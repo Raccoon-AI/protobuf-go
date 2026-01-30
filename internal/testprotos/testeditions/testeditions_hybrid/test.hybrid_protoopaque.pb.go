@@ -10,10 +10,10 @@
 package testeditions_hybrid
 
 import (
-	enums_hybrid "google.golang.org/protobuf/internal/testprotos/enums/enums_hybrid"
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	_ "google.golang.org/protobuf/types/gofeaturespb"
+	enums_hybrid "github.com/Raccoon-AI/protobuf-go/internal/testprotos/enums/enums_hybrid"
+	protoreflect "github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	protoimpl "github.com/Raccoon-AI/protobuf-go/runtime/protoimpl"
+	_ "github.com/Raccoon-AI/protobuf-go/types/gofeaturespb"
 	reflect "reflect"
 	unsafe "unsafe"
 )

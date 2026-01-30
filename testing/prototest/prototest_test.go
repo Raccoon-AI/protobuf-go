@@ -8,16 +8,16 @@ import (
 	"fmt"
 	"testing"
 
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/runtime/protoimpl"
-	"google.golang.org/protobuf/testing/prototest"
+	"github.com/Raccoon-AI/protobuf-go/proto"
+	"github.com/Raccoon-AI/protobuf-go/runtime/protoimpl"
+	"github.com/Raccoon-AI/protobuf-go/testing/prototest"
 
-	irregularpb "google.golang.org/protobuf/internal/testprotos/irregular"
-	legacypb "google.golang.org/protobuf/internal/testprotos/legacy"
-	legacy1pb "google.golang.org/protobuf/internal/testprotos/legacy/proto2_20160225_2fc053c5"
-	testpb "google.golang.org/protobuf/internal/testprotos/test"
-	test3pb "google.golang.org/protobuf/internal/testprotos/test3"
-	testeditionspb "google.golang.org/protobuf/internal/testprotos/testeditions"
+	irregularpb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/irregular"
+	legacypb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/legacy"
+	legacy1pb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/legacy/proto2_20160225_2fc053c5"
+	testpb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/test"
+	test3pb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/test3"
+	testeditionspb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/testeditions"
 )
 
 func Test(t *testing.T) {

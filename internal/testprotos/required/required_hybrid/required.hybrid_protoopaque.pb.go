@@ -10,9 +10,9 @@
 package required_hybrid
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	_ "google.golang.org/protobuf/types/gofeaturespb"
+	protoreflect "github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	protoimpl "github.com/Raccoon-AI/protobuf-go/runtime/protoimpl"
+	_ "github.com/Raccoon-AI/protobuf-go/types/gofeaturespb"
 	reflect "reflect"
 	unsafe "unsafe"
 )

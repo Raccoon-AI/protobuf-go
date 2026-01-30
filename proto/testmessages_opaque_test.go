@@ -11,20 +11,20 @@ import (
 	"strings"
 	"testing"
 
-	"google.golang.org/protobuf/internal/impl"
-	"google.golang.org/protobuf/internal/protobuild"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/reflect/protoregistry"
-	"google.golang.org/protobuf/testing/protopack"
+	"github.com/Raccoon-AI/protobuf-go/internal/impl"
+	"github.com/Raccoon-AI/protobuf-go/internal/protobuild"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoregistry"
+	"github.com/Raccoon-AI/protobuf-go/testing/protopack"
 
-	_ "google.golang.org/protobuf/internal/testprotos/lazy"
-	_ "google.golang.org/protobuf/internal/testprotos/lazy/lazy_opaque"
-	_ "google.golang.org/protobuf/internal/testprotos/required"
-	_ "google.golang.org/protobuf/internal/testprotos/required/required_opaque"
-	_ "google.golang.org/protobuf/internal/testprotos/test"
-	_ "google.golang.org/protobuf/internal/testprotos/test3"
-	_ "google.golang.org/protobuf/internal/testprotos/testeditions/testeditions_hybrid"
-	_ "google.golang.org/protobuf/internal/testprotos/testeditions/testeditions_opaque"
+	_ "github.com/Raccoon-AI/protobuf-go/internal/testprotos/lazy"
+	_ "github.com/Raccoon-AI/protobuf-go/internal/testprotos/lazy/lazy_opaque"
+	_ "github.com/Raccoon-AI/protobuf-go/internal/testprotos/required"
+	_ "github.com/Raccoon-AI/protobuf-go/internal/testprotos/required/required_opaque"
+	_ "github.com/Raccoon-AI/protobuf-go/internal/testprotos/test"
+	_ "github.com/Raccoon-AI/protobuf-go/internal/testprotos/test3"
+	_ "github.com/Raccoon-AI/protobuf-go/internal/testprotos/testeditions/testeditions_hybrid"
+	_ "github.com/Raccoon-AI/protobuf-go/internal/testprotos/testeditions/testeditions_opaque"
 )
 
 var testLazyUnmarshal = flag.Bool("test_lazy_unmarshal", false, "test lazy proto.Unmarshal")

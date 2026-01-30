@@ -10,12 +10,12 @@ import (
 	"io"
 	"testing"
 
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protodesc"
-	"google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/Raccoon-AI/protobuf-go/proto"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protodesc"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
 
-	testpb "google.golang.org/protobuf/internal/testprotos/test"
-	"google.golang.org/protobuf/types/descriptorpb"
+	testpb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/test"
+	"github.com/Raccoon-AI/protobuf-go/types/descriptorpb"
 )
 
 var testFile = new(testpb.TestAllTypes).ProtoReflect().Descriptor().ParentFile()

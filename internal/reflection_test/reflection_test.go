@@ -9,10 +9,10 @@ import (
 	"reflect"
 	"testing"
 
-	testopenpb "google.golang.org/protobuf/internal/testprotos/testeditions"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/runtime/protoiface"
-	"google.golang.org/protobuf/testing/prototest"
+	testopenpb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/testeditions"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	"github.com/Raccoon-AI/protobuf-go/runtime/protoiface"
+	"github.com/Raccoon-AI/protobuf-go/testing/prototest"
 )
 
 func Test(t *testing.T) {

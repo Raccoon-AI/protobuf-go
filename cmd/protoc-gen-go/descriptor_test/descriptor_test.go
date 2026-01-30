@@ -7,14 +7,14 @@ package descriptor_test
 import (
 	"testing"
 
-	testopenpb "google.golang.org/protobuf/internal/testprotos/test"
-	testnopackagepb "google.golang.org/protobuf/internal/testprotos/test/test_nopackage"
-	testoptionpb "google.golang.org/protobuf/internal/testprotos/test/test_option"
-	testhybridpb "google.golang.org/protobuf/internal/testprotos/testeditions/testeditions_hybrid"
-	testopaquepb "google.golang.org/protobuf/internal/testprotos/testeditions/testeditions_opaque"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/types/descriptorpb"
-	"google.golang.org/protobuf/types/gofeaturespb"
+	testopenpb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/test"
+	testnopackagepb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/test/test_nopackage"
+	testoptionpb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/test/test_option"
+	testhybridpb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/testeditions/testeditions_hybrid"
+	testopaquepb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/testeditions/testeditions_opaque"
+	"github.com/Raccoon-AI/protobuf-go/proto"
+	"github.com/Raccoon-AI/protobuf-go/types/descriptorpb"
+	"github.com/Raccoon-AI/protobuf-go/types/gofeaturespb"
 )
 
 func TestFileModeEnum(t *testing.T) {

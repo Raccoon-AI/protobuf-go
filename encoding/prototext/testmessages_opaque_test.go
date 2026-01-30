@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"strings"
 
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/reflect/protoregistry"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoregistry"
 
-	_ "google.golang.org/protobuf/internal/testprotos/textpbeditions"
-	_ "google.golang.org/protobuf/internal/testprotos/textpbeditions/textpbeditions_opaque"
+	_ "github.com/Raccoon-AI/protobuf-go/internal/testprotos/textpbeditions"
+	_ "github.com/Raccoon-AI/protobuf-go/internal/testprotos/textpbeditions/textpbeditions_opaque"
 )
 
 var relatedMessages = func() map[protoreflect.MessageType][]protoreflect.MessageType {

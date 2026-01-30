@@ -12,9 +12,9 @@ import (
 	"io"
 	"math"
 
-	"google.golang.org/protobuf/encoding/protowire"
-	"google.golang.org/protobuf/internal/errors"
-	"google.golang.org/protobuf/proto"
+	"github.com/Raccoon-AI/protobuf-go/encoding/protowire"
+	"github.com/Raccoon-AI/protobuf-go/internal/errors"
+	"github.com/Raccoon-AI/protobuf-go/proto"
 )
 
 // MarshalOptions is a configurable varint size-delimited marshaler.

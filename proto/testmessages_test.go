@@ -5,19 +5,19 @@
 package proto_test
 
 import (
-	"google.golang.org/protobuf/encoding/protowire"
-	"google.golang.org/protobuf/internal/impl"
-	"google.golang.org/protobuf/internal/protobuild"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/reflect/protoregistry"
-	"google.golang.org/protobuf/testing/protopack"
+	"github.com/Raccoon-AI/protobuf-go/encoding/protowire"
+	"github.com/Raccoon-AI/protobuf-go/internal/impl"
+	"github.com/Raccoon-AI/protobuf-go/internal/protobuild"
+	"github.com/Raccoon-AI/protobuf-go/proto"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoregistry"
+	"github.com/Raccoon-AI/protobuf-go/testing/protopack"
 
-	legacypb "google.golang.org/protobuf/internal/testprotos/legacy"
-	requiredpb "google.golang.org/protobuf/internal/testprotos/required"
-	testpb "google.golang.org/protobuf/internal/testprotos/test"
-	test3pb "google.golang.org/protobuf/internal/testprotos/test3"
-	testeditionspb "google.golang.org/protobuf/internal/testprotos/testeditions"
+	legacypb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/legacy"
+	requiredpb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/required"
+	testpb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/test"
+	test3pb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/test3"
+	testeditionspb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/testeditions"
 )
 
 type testProto struct {

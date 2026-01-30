@@ -8,16 +8,16 @@ import (
 	"reflect"
 	"testing"
 
+	importoptionpb "github.com/Raccoon-AI/protobuf-go/cmd/protoc-gen-go/testdata/import_option"
+	"github.com/Raccoon-AI/protobuf-go/encoding/protowire"
+	"github.com/Raccoon-AI/protobuf-go/proto"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protodesc"
+	"github.com/Raccoon-AI/protobuf-go/types/descriptorpb"
 	"github.com/google/go-cmp/cmp"
-	importoptionpb "google.golang.org/protobuf/cmd/protoc-gen-go/testdata/import_option"
-	"google.golang.org/protobuf/encoding/protowire"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protodesc"
-	"google.golang.org/protobuf/types/descriptorpb"
 
 	// Ensure the custom option is linked into this test binary.
 	// NB: import_option_unlinked is not linked into this test binary.
-	importoptioncustompb "google.golang.org/protobuf/cmd/protoc-gen-go/testdata/import_option_custom"
+	importoptioncustompb "github.com/Raccoon-AI/protobuf-go/cmd/protoc-gen-go/testdata/import_option_custom"
 )
 
 func TestImportOption(t *testing.T) {

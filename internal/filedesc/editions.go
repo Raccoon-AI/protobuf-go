@@ -7,10 +7,10 @@ package filedesc
 import (
 	"fmt"
 
-	"google.golang.org/protobuf/encoding/protowire"
-	"google.golang.org/protobuf/internal/editiondefaults"
-	"google.golang.org/protobuf/internal/genid"
-	"google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/Raccoon-AI/protobuf-go/encoding/protowire"
+	"github.com/Raccoon-AI/protobuf-go/internal/editiondefaults"
+	"github.com/Raccoon-AI/protobuf-go/internal/genid"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
 )
 
 var (

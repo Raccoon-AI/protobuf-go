@@ -7,14 +7,14 @@ package protodesc
 import (
 	"testing"
 
+	"github.com/Raccoon-AI/protobuf-go/internal/filedesc"
+	"github.com/Raccoon-AI/protobuf-go/proto"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoregistry"
+	"github.com/Raccoon-AI/protobuf-go/testing/protocmp"
+	"github.com/Raccoon-AI/protobuf-go/types/descriptorpb"
+	"github.com/Raccoon-AI/protobuf-go/types/dynamicpb"
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/protobuf/internal/filedesc"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/reflect/protoregistry"
-	"google.golang.org/protobuf/testing/protocmp"
-	"google.golang.org/protobuf/types/descriptorpb"
-	"google.golang.org/protobuf/types/dynamicpb"
 )
 
 func TestEditionsRequired(t *testing.T) {

@@ -10,13 +10,13 @@ import (
 	"sort"
 	"sync"
 
-	"google.golang.org/protobuf/internal/genid"
+	"github.com/Raccoon-AI/protobuf-go/internal/genid"
 
-	"google.golang.org/protobuf/encoding/protowire"
-	"google.golang.org/protobuf/internal/descfmt"
-	"google.golang.org/protobuf/internal/errors"
-	"google.golang.org/protobuf/internal/pragma"
-	"google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/Raccoon-AI/protobuf-go/encoding/protowire"
+	"github.com/Raccoon-AI/protobuf-go/internal/descfmt"
+	"github.com/Raccoon-AI/protobuf-go/internal/errors"
+	"github.com/Raccoon-AI/protobuf-go/internal/pragma"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
 )
 
 type FileImports []protoreflect.FileImport

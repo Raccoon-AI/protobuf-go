@@ -8,10 +8,10 @@
 package fieldtrack
 
 import (
-	_ "google.golang.org/protobuf/internal/testprotos/annotation"
-	test "google.golang.org/protobuf/internal/testprotos/test"
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	_ "github.com/Raccoon-AI/protobuf-go/internal/testprotos/annotation"
+	test "github.com/Raccoon-AI/protobuf-go/internal/testprotos/test"
+	protoreflect "github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	protoimpl "github.com/Raccoon-AI/protobuf-go/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"

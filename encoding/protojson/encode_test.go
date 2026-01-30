@@ -11,22 +11,22 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"google.golang.org/protobuf/encoding/protojson"
-	"google.golang.org/protobuf/internal/detrand"
-	"google.golang.org/protobuf/internal/flags"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoregistry"
-	"google.golang.org/protobuf/testing/protopack"
+	"github.com/Raccoon-AI/protobuf-go/encoding/protojson"
+	"github.com/Raccoon-AI/protobuf-go/internal/detrand"
+	"github.com/Raccoon-AI/protobuf-go/internal/flags"
+	"github.com/Raccoon-AI/protobuf-go/proto"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoregistry"
+	"github.com/Raccoon-AI/protobuf-go/testing/protopack"
 
-	pb2 "google.golang.org/protobuf/internal/testprotos/textpb2"
-	pb3 "google.golang.org/protobuf/internal/testprotos/textpb3"
-	"google.golang.org/protobuf/types/known/anypb"
-	"google.golang.org/protobuf/types/known/durationpb"
-	"google.golang.org/protobuf/types/known/emptypb"
-	"google.golang.org/protobuf/types/known/fieldmaskpb"
-	"google.golang.org/protobuf/types/known/structpb"
-	"google.golang.org/protobuf/types/known/timestamppb"
-	"google.golang.org/protobuf/types/known/wrapperspb"
+	pb2 "github.com/Raccoon-AI/protobuf-go/internal/testprotos/textpb2"
+	pb3 "github.com/Raccoon-AI/protobuf-go/internal/testprotos/textpb3"
+	"github.com/Raccoon-AI/protobuf-go/types/known/anypb"
+	"github.com/Raccoon-AI/protobuf-go/types/known/durationpb"
+	"github.com/Raccoon-AI/protobuf-go/types/known/emptypb"
+	"github.com/Raccoon-AI/protobuf-go/types/known/fieldmaskpb"
+	"github.com/Raccoon-AI/protobuf-go/types/known/structpb"
+	"github.com/Raccoon-AI/protobuf-go/types/known/timestamppb"
+	"github.com/Raccoon-AI/protobuf-go/types/known/wrapperspb"
 )
 
 // Disable detrand to enable direct comparisons on outputs.
@@ -2644,11 +2644,11 @@ func TestUnquoted64BitNumber(t *testing.T) {
 			desc: "Unquoted64BitNumber=true - mixed types",
 			mo:   protojson.MarshalOptions{Multiline: true, Unquoted64BitNumber: true},
 			input: &pb2.Scalars{
-				OptBool:     proto.Bool(true),
-				OptInt32:    proto.Int32(42),
-				OptInt64:    proto.Int64(9007199254740992), // Number larger than safe JS integer
-				OptString:   proto.String("test"),
-				OptDouble:   proto.Float64(3.14159),
+				OptBool:   proto.Bool(true),
+				OptInt32:  proto.Int32(42),
+				OptInt64:  proto.Int64(9007199254740992), // Number larger than safe JS integer
+				OptString: proto.String("test"),
+				OptDouble: proto.Float64(3.14159),
 			},
 			want: `{
   "optBool": true,

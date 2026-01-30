@@ -26,7 +26,7 @@ import (
 	"testing"
 	"time"
 
-	"google.golang.org/protobuf/internal/version"
+	"github.com/Raccoon-AI/protobuf-go/internal/version"
 )
 
 var (

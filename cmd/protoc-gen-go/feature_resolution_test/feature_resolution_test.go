@@ -11,17 +11,17 @@ import (
 	"strings"
 	"testing"
 
+	basicpb "github.com/Raccoon-AI/protobuf-go/cmd/protoc-gen-go/testdata/featureresolution"
+	testfeaturespb "github.com/Raccoon-AI/protobuf-go/cmd/protoc-gen-go/testdata/features"
+	"github.com/Raccoon-AI/protobuf-go/compiler/protogen"
+	"github.com/Raccoon-AI/protobuf-go/proto"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protodesc"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	"github.com/Raccoon-AI/protobuf-go/runtime/protoimpl"
+	descpb "github.com/Raccoon-AI/protobuf-go/types/descriptorpb"
+	"github.com/Raccoon-AI/protobuf-go/types/gofeaturespb"
+	"github.com/Raccoon-AI/protobuf-go/types/pluginpb"
 	"github.com/google/go-cmp/cmp"
-	basicpb "google.golang.org/protobuf/cmd/protoc-gen-go/testdata/featureresolution"
-	testfeaturespb "google.golang.org/protobuf/cmd/protoc-gen-go/testdata/features"
-	"google.golang.org/protobuf/compiler/protogen"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protodesc"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/runtime/protoimpl"
-	descpb "google.golang.org/protobuf/types/descriptorpb"
-	"google.golang.org/protobuf/types/gofeaturespb"
-	"google.golang.org/protobuf/types/pluginpb"
 )
 
 var (

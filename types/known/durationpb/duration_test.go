@@ -10,12 +10,12 @@ import (
 	"testing"
 	"time"
 
+	"github.com/Raccoon-AI/protobuf-go/internal/detrand"
+	"github.com/Raccoon-AI/protobuf-go/testing/protocmp"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"google.golang.org/protobuf/internal/detrand"
-	"google.golang.org/protobuf/testing/protocmp"
 
-	durpb "google.golang.org/protobuf/types/known/durationpb"
+	durpb "github.com/Raccoon-AI/protobuf-go/types/known/durationpb"
 )
 
 func init() {

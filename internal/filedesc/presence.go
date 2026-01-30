@@ -4,7 +4,7 @@
 
 package filedesc
 
-import "google.golang.org/protobuf/reflect/protoreflect"
+import "github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
 
 // UsePresenceForField reports whether the presence bitmap should be used for
 // the specified field.

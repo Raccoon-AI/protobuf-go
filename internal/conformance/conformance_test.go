@@ -15,14 +15,14 @@ import (
 	"path/filepath"
 	"testing"
 
-	"google.golang.org/protobuf/encoding/protojson"
-	"google.golang.org/protobuf/encoding/prototext"
-	"google.golang.org/protobuf/proto"
+	"github.com/Raccoon-AI/protobuf-go/encoding/protojson"
+	"github.com/Raccoon-AI/protobuf-go/encoding/prototext"
+	"github.com/Raccoon-AI/protobuf-go/proto"
 
-	pb "google.golang.org/protobuf/internal/testprotos/conformance"
-	epb "google.golang.org/protobuf/internal/testprotos/conformance/editions"
-	empb "google.golang.org/protobuf/internal/testprotos/conformance/editionsmigration"
-	eupb "google.golang.org/protobuf/internal/testprotos/conformance/editionunstable"
+	pb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/conformance"
+	epb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/conformance/editions"
+	empb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/conformance/editionsmigration"
+	eupb "github.com/Raccoon-AI/protobuf-go/internal/testprotos/conformance/editionunstable"
 )
 
 func init() {

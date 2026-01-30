@@ -8,8 +8,8 @@
 package visibility
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	protoreflect "github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	protoimpl "github.com/Raccoon-AI/protobuf-go/runtime/protoimpl"
 	reflect "reflect"
 	unsafe "unsafe"
 )
@@ -1346,7 +1346,7 @@ const file_cmd_protoc_gen_go_testdata_visibility_visibility_proto_rawDesc = "" +
 	"\vEXPORT_ZERO\x10\x000\x02*\x1d\n" +
 	"\tLocalEnum\x12\x0e\n" +
 	"\n" +
-	"LOCAL_ZERO\x10\x000\x01BEZ@google.golang.org/protobuf/cmd/protoc-gen-go/testdata/visibility\x92\x03\x00b\beditionsp\xe9\a"
+	"LOCAL_ZERO\x10\x000\x01BEZ@github.com/Raccoon-AI/protobuf-go/cmd/protoc-gen-go/testdata/visibility\x92\x03\x00b\beditionsp\xe9\a"
 
 var file_cmd_protoc_gen_go_testdata_visibility_visibility_proto_enumTypes = make([]protoimpl.EnumInfo, 12)
 var file_cmd_protoc_gen_go_testdata_visibility_visibility_proto_msgTypes = make([]protoimpl.MessageInfo, 12)

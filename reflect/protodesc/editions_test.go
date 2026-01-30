@@ -7,13 +7,13 @@ package protodesc
 import (
 	"testing"
 
-	"google.golang.org/protobuf/internal/genid"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/reflect/protoregistry"
-	"google.golang.org/protobuf/types/descriptorpb"
-	"google.golang.org/protobuf/types/dynamicpb"
-	"google.golang.org/protobuf/types/gofeaturespb"
+	"github.com/Raccoon-AI/protobuf-go/internal/genid"
+	"github.com/Raccoon-AI/protobuf-go/proto"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoreflect"
+	"github.com/Raccoon-AI/protobuf-go/reflect/protoregistry"
+	"github.com/Raccoon-AI/protobuf-go/types/descriptorpb"
+	"github.com/Raccoon-AI/protobuf-go/types/dynamicpb"
+	"github.com/Raccoon-AI/protobuf-go/types/gofeaturespb"
 )
 
 func TestGoFeatures_NotExpectedType(t *testing.T) {
