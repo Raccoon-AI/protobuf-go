@@ -2565,3 +2565,112 @@ func TestMarshalAppendAllocations(t *testing.T) {
 		t.Errorf("expect amortized allocs/op to be identical")
 	}
 }
+
+func TestUnquoted64BitNumber(t *testing.T) {
+	tests := []struct {
+		desc    string
+		mo      protojson.MarshalOptions
+		input   proto.Message
+		want    string
+		wantErr bool
+	}{
+		{
+			desc: "default behavior - 64-bit integers quoted",
+			mo:   protojson.MarshalOptions{Multiline: true},
+			input: &pb2.Scalars{
+				OptInt64:    proto.Int64(9223372036854775807),
+				OptUint64:   proto.Uint64(18446744073709551615),
+				OptSint64:   proto.Int64(-9223372036854775808),
+				OptFixed64:  proto.Uint64(1234567890),
+				OptSfixed64: proto.Int64(-1234567890),
+			},
+			want: `{
+  "optInt64": "9223372036854775807",
+  "optUint64": "18446744073709551615",
+  "optSint64": "-9223372036854775808",
+  "optFixed64": "1234567890",
+  "optSfixed64": "-1234567890"
+}`,
+		},
+		{
+			desc: "Unquoted64BitNumber=true - 64-bit integers unquoted",
+			mo:   protojson.MarshalOptions{Multiline: true, Unquoted64BitNumber: true},
+			input: &pb2.Scalars{
+				OptInt64:    proto.Int64(9223372036854775807),
+				OptUint64:   proto.Uint64(18446744073709551615),
+				OptSint64:   proto.Int64(-9223372036854775808),
+				OptFixed64:  proto.Uint64(1234567890),
+				OptSfixed64: proto.Int64(-1234567890),
+			},
+			want: `{
+  "optInt64": 9223372036854775807,
+  "optUint64": 18446744073709551615,
+  "optSint64": -9223372036854775808,
+  "optFixed64": 1234567890,
+  "optSfixed64": -1234567890
+}`,
+		},
+		{
+			desc: "Unquoted64BitNumber=true - 32-bit integers remain unquoted",
+			mo:   protojson.MarshalOptions{Multiline: true, Unquoted64BitNumber: true},
+			input: &pb2.Scalars{
+				OptInt32:    proto.Int32(2147483647),
+				OptUint32:   proto.Uint32(4294967295),
+				OptSint32:   proto.Int32(-2147483648),
+				OptFixed32:  proto.Uint32(1234567890),
+				OptSfixed32: proto.Int32(-1234567890),
+			},
+			want: `{
+  "optInt32": 2147483647,
+  "optUint32": 4294967295,
+  "optSint32": -2147483648,
+  "optFixed32": 1234567890,
+  "optSfixed32": -1234567890
+}`,
+		},
+		{
+			desc: "Unquoted64BitNumber=true - proto3 64-bit integers",
+			mo:   protojson.MarshalOptions{Multiline: true, Unquoted64BitNumber: true},
+			input: &pb3.Scalars{
+				SInt64:  9223372036854775807,
+				SUint64: 18446744073709551615,
+			},
+			want: `{
+  "sInt64": 9223372036854775807,
+  "sUint64": 18446744073709551615
+}`,
+		},
+		{
+			desc: "Unquoted64BitNumber=true - mixed types",
+			mo:   protojson.MarshalOptions{Multiline: true, Unquoted64BitNumber: true},
+			input: &pb2.Scalars{
+				OptBool:     proto.Bool(true),
+				OptInt32:    proto.Int32(42),
+				OptInt64:    proto.Int64(9007199254740992), // Number larger than safe JS integer
+				OptString:   proto.String("test"),
+				OptDouble:   proto.Float64(3.14159),
+			},
+			want: `{
+  "optBool": true,
+  "optInt32": 42,
+  "optInt64": 9007199254740992,
+  "optDouble": 3.14159,
+  "optString": "test"
+}`,
+		},
+	}
+
+	for _, tc := range tests {
+		t.Run(tc.desc, func(t *testing.T) {
+			got, err := tc.mo.Marshal(tc.input)
+			if (err != nil) != tc.wantErr {
+				t.Fatalf("Marshal() error = %v, wantErr %v", err, tc.wantErr)
+			}
+			if err == nil {
+				if diff := cmp.Diff(tc.want, string(got)); diff != "" {
+					t.Errorf("Marshal() mismatch (-want +got):\n%s", diff)
+				}
+			}
+		})
+	}
+}
